@@ -49,14 +49,12 @@
 
 ## Как прошить STM32?
 
-1. Подключить ST-Link к STM32 и ПК
-
-2. Выполнить задачу(task) flash-openocd в VSCode
+1. Подключите ST-Link к STM32 и ПК
   
-3. Нет VSCode? Загрузите прошивку через терминал:
+2. Загрузите прошивку через терминал:
 
-   3.1 `openocd -f interface/stlink.cfg -f target/stm32f1x.cfg -c 'program (путь к прошивке)/Flash.bin 0x08000000 verify reset exit'`
+   2.1 `openocd -f interface/stlink.cfg -f target/stm32f1x.cfg -c 'program (путь к прошивке)/Flash.bin 0x08000000 verify reset exit'`
 
->Результат - прошивка загружена в ваш контроллер! Если вы ничего не меняли, на вашей плате заморгает один из светодиодов
+>Результат - прошивка загружена в ваш контроллер! Если вы ничего не меняли в main.c, то на вашей плате заморгает один из светодиодов
 
 
